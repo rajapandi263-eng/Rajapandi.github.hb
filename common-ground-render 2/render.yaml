@@ -1,0 +1,31 @@
+# This provisions a paid web service and a 1 GB persistent disk.
+# Review Render's current charges before deploying the Blueprint.
+services:
+  - type: web
+    name: common-ground
+    runtime: node
+    plan: 0.5c-512mb
+    numInstances: 1
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    disk:
+      name: common-ground-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DEPLOYMENT_MODE
+        value: hosted
+      - key: HOST
+        value: 0.0.0.0
+      - key: DB_PATH
+        value: /var/data/network.sqlite
+      - key: DEMO_MODE
+        value: "false"
+      - key: REGISTRATION_ENABLED
+        value: "true"
+      - key: REGISTRATION_CODE
+        generateValue: true

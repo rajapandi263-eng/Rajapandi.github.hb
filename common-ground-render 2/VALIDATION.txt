@@ -1,0 +1,12 @@
+Common Ground for Render — validation
+
+Validated October 28, 2026.
+
+34 server integration checks passed: accounts/session isolation, profile/search/Power bumps, private chat/read state/pagination/retries, hosted HTTPS origin and cookie checks, join-code registration, rate limiting, hashing concurrency, persistent database reopen, Render environment startup and graceful shutdown.
+7 frontend/service-worker checks passed: join-code form and payload, CSRF/same-origin/no-store requests, public-only precache, private API bypass, offline public-shell fallback and scoped cache cleanup.
+The included render.yaml passed the official Render JSON schema using Ajv2020.
+Actual browser smoke: created two synthetic accounts, saved a profile, found it from the second account, sent a message, signed in as the recipient, verified unread status and replied. No browser console errors.
+Tests used Node24.19.0; the package targets Node24.x and pins Render's current24.22.1 runtime.
+
+This is prepared source, not a deployed Render service. Live Render deployment, real phone Home Screen installation and production email/employee identity verification have not been performed.
+The ZIP excludes every existing pilot database, real .env file, credential file, local test database and desktop bundle.

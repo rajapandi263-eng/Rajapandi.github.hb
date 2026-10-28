@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "Common Ground · Shared Pilot",
+  "short_name": "Common Ground",
+  "description": "Find colleagues, share skills, and chat across your devices in one shared pilot.",
+  "start_url": "/#directory",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f8f5",
+  "theme_color": "#174b45",
+  "lang": "en",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Messages", "url": "/#messages", "description": "Open your shared conversations" },
+    { "name": "Discover people", "url": "/#directory", "description": "Find colleagues by skill and interest" }
+  ]
+}

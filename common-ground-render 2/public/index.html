@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#174b45">
+  <meta name="description" content="Common Ground helps coworkers discover shared skills, interests, and new connections.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Common Ground">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Common Ground · Your company network</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/mobile.css">
+  <script src="/app.js" defer></script>
+  <script src="/install.mjs" type="module"></script>
+</head>
+<body>
+  <div id="app"><main class="boot"><div class="brand-mark" aria-hidden="true">cg</div><h1>Common Ground</h1><p>Opening your network…</p></main></div>
+  <dialog id="person-dialog" aria-labelledby="person-title"></dialog>
+  <dialog id="install-guide" class="install-guide" aria-labelledby="install-title">
+    <div class="install-heading"><span class="pilot-badge"><span class="dot"></span>Shared pilot</span><button id="close-install" class="icon-button" aria-label="Close installation guide">×</button></div>
+    <h2 id="install-title">Take your network with you.</h2>
+    <p class="install-intro">Add Common Ground to your Home Screen, then sign in with the same account on your phone, tablet, or computer.</p>
+    <div class="install-steps">
+      <section><h3>iPhone &amp; iPad · Safari</h3><p>Open this HTTPS site in Safari. Choose <strong>Share → Add to Home Screen</strong> (on iPad, choose <strong>View More</strong> if needed). Keep <strong>Open as Web App</strong> on if shown, then tap <strong>Add</strong>.</p></section>
+      <section><h3>Android · Chrome</h3><p>Choose <strong>More → Install and create shortcut → Install</strong>. Some Chrome versions show <strong>Install app</strong> or <strong>Add to Home screen</strong>.</p></section>
+    </div>
+    <button id="install-now" class="primary" hidden>Install Common Ground</button>
+    <div class="install-network"><h3>One shared service</h3><p>Accounts, profiles, Power bumps, and conversations are saved in this pilot’s shared service. Sign-in, profiles, and chat require internet access. The installed app can show a connection screen offline; changes are sent while you are online.</p></div>
+    <p id="install-status" class="offline-status" role="status" aria-live="polite">Use the same site address on every device.</p>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <p id="connection-status" class="connection-status" role="status" aria-live="polite">Shared pilot · Sign-in, profiles, and chat require internet.</p>
+</body>
+</html>

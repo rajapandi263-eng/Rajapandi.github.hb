@@ -1,0 +1,20 @@
+.connection-status{font-size:10px;text-align:center;padding:12px 18px calc(12px + env(safe-area-inset-bottom));color:var(--muted);border-top:1px solid var(--line);background:var(--canvas)}
+.connection-status[data-online="false"]{color:#8b4c15;background:#fff5df}
+.shared-install-help{font-size:11px;margin-top:12px;padding-left:0;min-height:36px}
+.shared-install-button{width:31px;height:31px}.shared-install-button svg{width:17px;height:17px}
+.install-guide{padding:26px;max-width:540px;max-height:calc(100dvh - 32px);overflow-y:auto}
+.install-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.install-heading .icon-button{font-size:26px;background:var(--soft)}
+.install-guide h2{font-size:26px;letter-spacing:-.7px;font-weight:500;line-height:1.2;margin-bottom:12px}
+.install-intro{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:23px}
+.install-steps{display:grid;gap:18px}.install-guide h3{font-size:13px;font-weight:600;margin-bottom:6px}.install-steps p,.install-storage>p{font-size:12px;color:var(--muted);line-height:1.8}
+.install-guide .primary{font-size:12px;margin-top:19px;width:100%}
+.install-storage{margin-top:22px;padding:19px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.install-storage .secondary{font-size:11px;min-height:36px;margin-top:12px}.install-storage .small{margin-top:10px;font-size:11px}
+.offline-status{font-size:11px;color:var(--green);margin:17px 0 10px}
+.install-guide-link{font-size:11px}
+@media(display-mode:standalone){body{padding-top:env(safe-area-inset-top);padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}.connection-status{font-size:9px}.app-shell{min-height:calc(100dvh - 39px)}}
+@media(max-width:620px){input,select,textarea{font-size:16px!important}.auth-fields input{font-size:16px}.auth-story-footer{display:none}.install-guide{padding:23px}.install-guide h2{font-size:24px}.chat-layout{height:min(590px,calc(100dvh - 180px));min-height:500px}.sidebar{padding-top:16px}.topbar-right{gap:5px}.shared-install-button{width:27px;height:30px}}
+
+
+.shared-install-help{min-height:44px;font-size:12px}.connection-status{font-size:11px}.install-network{border-top:1px solid var(--line);margin-top:22px;padding-top:19px}.install-network p{font-size:12px;color:var(--muted);line-height:1.8}.install-guide a{font-size:12px}.shared-install-button{min-width:40px;min-height:40px}
+@media(max-width:620px){.topbar-right .pilot-badge,.breadcrumbs>span{display:none}.topbar-right{gap:6px}.shared-install-button,.mobile-logout{min-width:40px;min-height:40px}.nav-button{min-width:0;flex:1;min-height:46px}.auth-tab{min-height:44px}.check-label{min-height:44px}.connection-status{font-size:10px}.chat-layout{min-height:440px}.install-guide{max-height:calc(100dvh - 24px)}}
